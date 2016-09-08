@@ -54,7 +54,7 @@ if not os.path.exists(directory):
 
 #gera os aqruivos de trace
 for arq_i in range(0, int(n_arquivos_trace)):
-	file = open(directory + "arquivoTrace" + str(arq_i) + ".txt", "w")
+	file = open(directory + "/arquivoTrace" + str(arq_i) + ".txt", "w")
 	for proc_i in range(0, int(n_processos_por_arquivo)):
 		if proc_i != 0 and proc_i % int(processos_gerados_por_segundo) == 0:
 			tempo = tempo + 1
