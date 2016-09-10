@@ -67,7 +67,7 @@ for arq_i in range(0, int(n_arquivos_trace)):
 		if proc_i != 0 and proc_i % int(processos_gerados_por_segundo) == 0:
 			tempo = tempo + 1
 		# gera dt e deadline aleatorios
-		dt = random.uniform(1, int(longevidade_do_proc) + 1)
+		dt = random.uniform(0, int(longevidade_do_proc) + 1)
 		deadline = random.uniform(tempo + dt, tempo + dt * float(proporcao_deadline) + 1)
 		file.write(str(tempo) + " processo" + str(proc_i) + " " + str(dt) + " " + str(deadline) + "\n")
 		
